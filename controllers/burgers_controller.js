@@ -17,7 +17,7 @@ router.post("/api/burger", function (req, res) {
 
 router.get("/", function (req, res) {
   orm.selectAll(function (data) {
-    res.json(data);
+    res.render("index", { burgers: data });
   });
 });
 
