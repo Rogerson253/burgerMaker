@@ -17,4 +17,24 @@ $(function () {
       location.reload();
     });
   });
+
+  $("#devoured").on("click", function (event) {
+    var id = $(this).data("id");
+    var devoured = $(this).data("devoured");
+    console.log(devoured);
+
+    var newDevoured = {
+      devoured: devoured,
+    };
+
+    // Send the PUT request.
+    $.ajax("/api/burger/" + id, {
+      type: "PUT",
+      data: newDevoured,
+    }).then(function () {
+      console.log("changed devoured", newDevoured);
+      // Reload the page to get the updated list
+      location.reload();
+    });
+  });
 });

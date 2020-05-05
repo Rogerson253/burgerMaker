@@ -1,14 +1,18 @@
 <h1>Burgers</h1>
+<h2>Ready to Eat!</h2>
+{{#each burgers}}
+  <p>ID: {{this.id}}</p>
+  <p>Burger: {{this.burger_name}}</p>
+  <button id='devoured'>Devour me!</button>
+{{/each}}
 
-<ul>
-  {{#each burgers}}
-  	<li>
-  	   <p>ID: {{this.id}}</p>
-       <p>Burger: {{this.burger_name}}</p>
-       <button>Devour me!</button>
-  	</li>
-  {{/each}}
-</ul>
+<h2>Devoured!</h2>
+{{#each burgers}}
+  {{#if devoured}}
+    <p>ID: {{this.id}}</p>
+    <p>Burger: {{this.burger_name}}</p>
+  {{/if}}
+{{/each}}
 
 <form class="create-form">
 
@@ -19,4 +23,3 @@
 
   <button type="submit">Add Burger</button>
 </form>
-
