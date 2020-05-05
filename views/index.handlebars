@@ -5,14 +5,18 @@
   	<li>
   	   <p>ID: {{this.id}}</p>
        <p>Burger: {{this.burger_name}}</p>
+       <button>Devour me!</button>
   	</li>
   {{/each}}
 </ul>
 
-{{!-- <div>
-  <form action="/" method="POST">
-  	<textarea type="text" name="wish"></textarea>
+<form class="create-form">
 
-  	<button type="submit">Submit</button>
-  </form>
-</div> --}}
+  <div class="form-group">
+    <label for="burg">Create Burger:</label>
+    <input type="text" id="burg" name="name">
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
+
