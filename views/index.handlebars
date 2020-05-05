@@ -1,9 +1,11 @@
 <h1>Burgers</h1>
 <h2>Ready to Eat!</h2>
 {{#each burgers}}
-  <p>ID: {{this.id}}</p>
-  <p>Burger: {{this.burger_name}}</p>
-  <button id='devoured'>Devour me!</button>
+  {{#unless devoured}}
+    <p>ID: {{this.id}}</p>
+    <p>Burger: {{this.burger_name}}</p>
+    <button id='devoured'>Devour me!</button>
+  {{/unless}}
 {{/each}}
 
 <h2>Devoured!</h2>
