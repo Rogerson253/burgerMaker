@@ -1,5 +1,6 @@
 // Dependencies
 var express = require("express");
+require('dotenv').config();
 var exphbs = require("express-handlebars");
 var PORT = process.env.PORT || 7000;
 
