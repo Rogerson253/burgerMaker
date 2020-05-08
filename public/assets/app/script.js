@@ -20,18 +20,18 @@ $(function () {
 
   $("#devoured").on("click", function (event) {
     var id = $(this).data("id");
-    var newDevoured = $(this).data("devoured");
+    // var eaten = $(this).data("eaten");
 
-    var newDevouredState = {
-      devoured: newDevoured,
-    };
+    // var newDevoured = {
+    //   devoured: eaten,
+    // };
 
     // Send the PUT request.
     $.ajax("/api/burger/" + id, {
       type: "PUT",
-      data: newDevouredState,
+      // data: newDevoured,
     }).then(function () {
-      console.log("changed devoured", newDevouredState);
+      console.log("changed devoured", id);
       // Reload the page to get the updated list
       location.reload();
     });
